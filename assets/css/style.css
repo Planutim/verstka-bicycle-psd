@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+html,body{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas:
+    "top top top top top top"
+    "about about about about about about"
+    "work work work work work work"
+    "twitter twitter twitter twitter twitter twitter"
+    "shop shop shop shop shop shop"
+    "contacts contacts contacts contacts contacts contacts"
+    "footer footer footer footer footer footer";
+    min-width: 576px;
+    background-color: rgba(180, 170, 170, 0.3);
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+.top-container{
+    position: relative;
+    grid-area: top;
+}
+.menu{
+}
+.menu-nav{
+    z-index: 1000;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 30px;
+}
+
+.menu-nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 900px;
+}
+
+.menu-nav__link{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.top{
+    position: relative;
+
+    padding-bottom: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/top-bg.png");
+    background-position: center;
+}
+.about{
+    text-align: center;
+    grid-area: about;
+    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+.about h2{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.about p{
+    width: 70%;
+    font-size: 20px;
+    text-align: center;
+}
+.work{
+    grid-area: work;
+    display: flex;
+    flex-direction: column;
+}
+/* bike1 */
+.bike1{
+    display: grid;
+ 
+    column-gap: 0px;
+    grid-template-columns: 66% 34%;
+    grid-template-rows: 66% 34%;
+    grid-template-areas: 
+    "image1 text"
+    "image1 image2";
+}
+
+.bike1 .image-1{
+    grid-area: image1;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+.bike1 .image-1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.bike1 .image-1 .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+.bike1 .text{
+    position: relative;
+    grid-area: text;
+    display: flex;
+    background-color: white !important;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: inherit;
+}
+.bike1 .text:after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: inherit;
+    position: absolute;
+    top: 95%;
+    transform: rotate(45deg);
+}
+.bike1 .text>h3{
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.bike1 .text>p{
+    width: 70%;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5em;
+}
+.bike1 .text>img{
+    flex-basis: 0;
+}
+
+.bike1 .image-2{
+    display: flex;
+    grid-area: image2;
+    margin: 0;
+    padding: 0;
+
+}
+.bike1 .image-2 img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* bike2 */
+.bike2{
+    display: grid;
+    grid-template-columns: 34% 66%;
+    grid-template-rows: 66% 34%;
+    grid-template-areas:
+    "text image1"
+    "image2 image1";
+}
+
+.bike2 .image-1{
+    position: relative;
+    grid-area: image1;
+    padding: 0;
+    margin: 0;
+}
+.bike2 .image-1 .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+    transform:scale(1.1);
+}
+.bike2 .image-1 img{
+    height: 100%;
+    width: 100%;
+}
+
+.bike2 .text{
+    padding-top: 20px;
+    grid-area:text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+.bike2 .text:after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: inherit;
+    position: absolute;
+    top: 95%;
+    transform: rotate(45deg);
+}
+.bike2 .text h3{
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+
+.bike2 .text p{
+    width: 80%;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.bike2 .image-2{
+    grid-area: image2;
+}
+
+.bike2 .image-2 img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* bike3 */
+
+.bike3{
+    display: grid;
+    grid-template-columns: 34% 33% 33%;
+    grid-template-rows: 66% 34%;
+    grid-template-areas: 
+    "image1 text image2"
+    "image1 image3 image2";
+    overflow: hidden;
+}
+
+.bike3 .image-1{
+    grid-area: image1;
+    position: relative;
+}
+.bike3 .image-1 img{
+    width: 100%;
+    height: 100%;
+}
+.bike3 .logo{
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    opacity: 0.9;
+    transform: scale(1.1); 
+}
+
+.bike3 .text{
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    text-align: center;
+}
+.bike3 .text:after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 95%;
+    background-color: inherit;
+    transform: rotate(45deg);
+}
+.bike3 .text h3{
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+}
+.bike3 .text p{
+    font-size: 18px;
+    width: 70%;
+    line-height: 1.5em;
+}
+
+
+.bike3 .image-2{
+    grid-area: image2;
+    overflow: hidden;
+}
+.bike3 .image-2 img{
+    height: 100%;
+}
+
+.bike3 .image-3{
+    overflow:hidden;
+}
+.bike3 .image-3 img{
+    height: 100%;
+    grid-area: image3;
+}
+
+/* tweet */
+.radio{
+    display: none;
+}
+.labels>label{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 1px solid grey;
+}
+
+
+.tweet{
+    display: none;
+}
+
+#radio1:checked~.tweet-1,
+#radio2:checked~.tweet-2,
+#radio3:checked~.tweet-3{
+    display: block;
+}
+
+.twitter{
+    grid-area: twitter;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.twitter .logo{
+    color: #56C7EE;
+    font-size: 40px;
+   
+}
+.twitter .logo>i{
+    padding: 13px;
+}
+.twitter-content{
+    font-size: 1.6em;
+    width: 70%;
+    height: 200px;
+}
+.twitter-title{
+    letter-spacing: 0.2em;
+}
+.twitter-tweet{
+    font-style: italic;
+}
+
+.labels .active{
+    background-color: black;
+}
+
+
+
+/* shop */
+
+.shop{
+    grid-area: shop;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 3fr 3fr 2fr;
+    grid-template-areas:
+    "image1 image2 image4 image5 image6 image6"
+    "image3 image3 image4 image5 image7 image8"
+    "button button button button button button";
+}
+
+.shop img{
+    height: 100%;
+    width: 100%;
+}
+
+.shop .image-1{
+    grid-area:image1;
+}
+.shop .image-2{
+    grid-area: image2;
+}
+.shop .image-3{
+    grid-area: image3;
+}
+.shop .image-4{
+    grid-area: image4;
+}
+.shop .image-5{
+    grid-area: image5;
+}
+.shop .image-6{
+    grid-area: image6;
+    position: relative;
+    overflow: hidden;
+}
+.shop .image-6 .background{
+    position: absolute;
+    background:rgba(90, 167, 38, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.2);
+}
+.shop .image-6 .icon img{
+    width: auto;
+}
+.shop .image-6 .background p{
+    text-transform: uppercase;
+    color: white;
+}
+
+.shop .image-7{
+    grid-area: image7;
+}
+.shop .image-8{
+    grid-area: image8;
+}
+
+.shop .button{
+    grid-area: button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(40, 47, 53);
+}
+.shop .button button{
+    letter-spacing: 0.2em;
+    font-family: inherit;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid white;
+    background-color: inherit;
+    width: auto;
+    height: auto;
+    padding: 20px 60px;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+/* .contacts */
+
+.contacts{
+    grid-area: contacts;
+    font-size: 1.5em;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: white;
+}
+
+.contacts h4{
+    font-family: inherit;
+    font-style: italic;
+    font-weight: normal;
+    color: rgba(88, 85, 85, 0.705);
+}
+
+.contacts .form-group form{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-group input{
+    min-width: 500px;
+    padding: 10px;
+    border: 1px solid rgb(207, 202, 202);
+    outline: 1px solid rgba(207, 202, 202, 0.493);
+    font-size: 1.1em;
+    font-family: inherit;
+    font-style: italic;
+    
+}
+.form-group input::placeholder{
+    text-transform: lowercase;;
+    
+}
+
+
+.form-group button{
+    margin-left: 5px;
+    background-color: rgb(100, 194, 158);
+    color: white;
+    padding: 25px 45px;
+    font-size: 1.05em;
+    font-family: inherit;
+    outline: none;
+    border: none;
+}
+
+/* footer */
+
+.footer{
+    grid-area:footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.info{
+    margin: auto;
+}
+.info>p{
+    font-family: inherit;
+    font-style: italic;
+}
+.icons{
+    margin: auto;
+}
+
+.icons i{
+    font-size: 1.3em;
+    margin: 15px;
+    padding: 10px;
+}
+
+.fa-twitter{
+    
+    background-color: #78CDF0;
+    border-radius: 50%;
+    color: white;
+}
+.fa-facebook{
+    color: #537BBD;
+    display: inline-block;
+    position: relative;
+    transform: scale(2);
+}
+
+.fa-pinterest{
+    background-color: #EB5755;
+    border-radius: 50%;
+    color: white;
+}
